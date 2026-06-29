@@ -21,6 +21,7 @@ font-family:Poppins,sans-serif;
 body{
 background:#07131f;
 color:#fff;
+scroll-behavior: smooth;
 }
 
 header{
@@ -40,6 +41,11 @@ font-weight:700;
 color:#19d3ff;
 }
 
+nav{
+display: flex;
+align-items: center;
+}
+
 nav a{
 text-decoration:none;
 color:white;
@@ -51,6 +57,23 @@ nav a:hover{
 color:#19d3ff;
 }
 
+.email-topo {
+color: #19d3ff;
+text-decoration: none;
+font-weight: 600;
+font-size: 14px;
+border: 1px solid #19d3ff;
+padding: 8px 15px;
+border-radius: 5px;
+margin-left: 25px;
+transition: .3s;
+}
+
+.email-topo:hover {
+background: #19d3ff;
+color: #000;
+}
+
 .hero{
 display:flex;
 justify-content:space-between;
@@ -58,6 +81,11 @@ align-items:center;
 padding:90px 10%;
 gap:50px;
 flex-wrap:wrap;
+}
+
+.hero div {
+flex: 1;
+min-width: 300px;
 }
 
 .hero h1{
@@ -97,6 +125,7 @@ background:#0d2033;
 padding:40px;
 border-radius:15px;
 max-width:420px;
+flex: 1;
 }
 
 .card h2{
@@ -136,6 +165,12 @@ padding:40px;
 text-align:center;
 background:#081726;
 margin-top:70px;
+line-height: 28px;
+}
+
+footer a {
+color: #19d3ff;
+text-decoration: none;
 }
 
 </style>
@@ -148,9 +183,9 @@ margin-top:70px;
 <div class="logo">InteligenciaTech</div>
 <nav>
 <a href="#">Início</a>
-<a href="#">Serviços</a>
-<a href="#">Sobre</a>
-<a href="#">Contato</a>
+<a href="#servicos">Serviços</a>
+<a href="#sobre">Sobre</a>
+<a class="email-topo" href="mailto:contato@inteligenciatech.com.br">✉ contato@inteligenciatech.com.br</a>
 </nav>
 </header>
 
@@ -167,7 +202,7 @@ Solicitar Orçamento
 </a>
 </div>
 
-<div class="card">
+<div class="card" id="sobre">
 <h2>Por que escolher a InteligenciaTech?</h2>
 <p>
 ✔ Atendimento rápido<br><br>
@@ -179,7 +214,7 @@ Solicitar Orçamento
 </div>
 </section>
 
-<section class="servicos">
+<section class="servicos" id="servicos">
 <h2>Nossos Serviços</h2>
 <div class="grid">
 <div class="box">
@@ -202,7 +237,8 @@ Solicitar Orçamento
 </section>
 
 <footer>
-© 2026 InteligenciaTech • Todos os direitos reservados.
+<p>✉ <a href="mailto:contato@inteligenciatech.com.br">contato@inteligenciatech.com.br</a></p>
+<p>© 2026 InteligenciaTech • Todos os direitos reservados.</p>
 </footer>
 
 </body>
