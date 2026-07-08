@@ -1,38 +1,438 @@
-<!-- Botão do LinkedIn -->
-<a href="https://www.linkedin.com/in/inteligencia-tech-28624041a" target="_blank" class="linkedin-btn">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-  </svg>
-  Conectar no LinkedIn
-</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InteligenciaTech | Consultoria Linx & Soluções em TI</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Consultoria especializada em sistemas Linx e soluções completas de TI: Suporte, Infraestrutura de Redes, Cloud, LGPD e Sistemas Empresariais.">
+  <meta name="keywords" content="Consultoria Linx, Suporte TI, Infraestrutura de rede, Microsoft 365, Linx Degust, Linx Microvix, Suporte Técnico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-/* Estilização do Botão */
-.linkedin-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #0a66c2; /* Azul oficial do LinkedIn */
-  color: #ffffff;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 24px; /* Bordas arredondadas estilo moderno */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* Efeito ao passar o mouse (Hover) */
-.linkedin-btn:hover {
-  background-color: #004182; /* Azul mais escuro */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* Efeito ao clicar */
-.linkedin-btn:active {
-  transform: translateY(0);
-}
-</style>
+    body {
+      background: #07131f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #081726;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Espaço para a Logo */
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      max-height: 50px; /* Ajuste a altura da sua logo aqui quando inserir o arquivo */
+      width: auto;
+    }
+
+    .logo-texto {
+      font-size: 28px;
+      font-weight: 700;
+      color: #19d3ff;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin-left: 25px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #19d3ff;
+    }
+
+    .email-topo {
+      color: #19d3ff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid #19d3ff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    .email-topo:hover {
+      background: #19d3ff;
+      color: #000;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 90px 10%;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero div {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero span {
+      color: #19d3ff;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #d5d5d5;
+      line-height: 1.7;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 35px;
+      background: #19d3ff;
+      padding: 18px 35px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .botao:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(25, 211, 255, 0.4);
+    }
+
+    .card {
+      background: #0d2033;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 420px;
+      flex: 1;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+      color: #19d3ff;
+      font-size: 24px;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card li {
+      margin-bottom: 12px;
+      color: #d5d5d5;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Seção de Ecossistema Linx */
+    .sistemas-linx {
+      background: #0a1b2c;
+      padding: 40px 10%;
+      text-align: center;
+    }
+
+    .sistemas-linx p {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #19d3ff;
+      margin-bottom: 20px;
+    }
+
+    .sistemas-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sistemas-grid span {
+      font-weight: 600;
+      font-size: 16px;
+      color: #fff;
+      background: rgba(25, 211, 255, 0.1);
+      border: 1px solid rgba(25, 211, 255, 0.2);
+      padding: 8px 20px;
+      border-radius: 20px;
+    }
+
+    /* Grid União de Serviços */
+    .servicos {
+      padding: 80px 10%;
+    }
+
+    .servicos h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .box {
+      background: #10263b;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid transparent;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      border-color: #19d3ff;
+    }
+
+    .box h3 {
+      margin-bottom: 15px;
+      color: #19d3ff;
+      font-size: 20px;
+    }
+
+    .box ul {
+      list-style: none;
+      padding-left: 5px;
+    }
+
+    .box li {
+      font-size: 14px;
+      color: #d5d5d5;
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .box li::before {
+      content: "•";
+      color: #19d3ff;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      background: #081726;
+      margin-top: 70px;
+      line-height: 28px;
+    }
+
+    footer a {
+      color: #19d3ff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 992px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      nav a, .email-topo {
+        margin-left: 0;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <!-- Caso queira usar imagem, remova o comentário abaixo e apague o texto 'InteligenciaTech' -->
+      <!-- <img src="logo.png" alt="InteligenciaTech" class="logo-img"> -->
+      <a href="#" class="logo-texto">InteligenciaTech</a>
+    </div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Diferenciais</a>
+      <a class="email-topo" href="mailto:contato@inteligenciatech.com.br">✉ contato@inteligenciatech.com.br</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Consultoria <span>Linx</span> & Soluções Completas de TI</h1>
+        <p>
+          Minimizamos falhas e otimizamos a operação do seu negócio. Especialistas em sustentação de sistemas Linx, infraestrutura de rede, segurança e Help Desk corporativo.
+        </p>
+        <a class="botao" href="https://wa.me/5511951520236" target="_blank" rel="noopener noreferrer">
+          Solicitar Orçamento
+        </a>
+      </div>
+
+      <section class="card" id="sobre">
+        <h2>Por que nos escolher?</h2>
+        <ul>
+          <li><span>✔</span> Especialistas no ecossistema Linx</li>
+          <li><span>✔</span> Atendimento rápido e emergencial</li>
+          <li><span>✔</span> Redução de custos em TI</li>
+          <li><span>✔</span> Segurança e Proteção de Dados</li>
+          <li><span>✔</span> Suporte Remoto e Presencial</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- Barra de expertise de sistemas Linx -->
+    <section class="sistemas-linx">
+      <p>Sistemas Linx & Verticais de Expertise</p>
+      <div class="sistemas-grid">
+        <span>Linx Degust</span>
+        <span>Linx Microvix</span>
+        <span>Linx ERP</span>
+        <span>Linx POS / Big</span>
+        <span>Parametrizadores Fiscais</span>
+      </div>
+    </section>
+
+    <section class="servicos" id="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="grid">
+        
+        <!-- Blome 1: Suporte Técnico -->
+        <article class="box">
+          <h3>🖥️ Suporte Técnico em TI</h3>
+          <ul>
+            <li>Suporte remoto e presencial</li>
+            <li>Atendimento emergencial focado em PDV</li>
+            <li>Contrato mensal de suporte corporativo</li>
+            <li>Help Desk estruturado para empresas</li>
+          </ul>
+        </article>
+
+        <!-- Bloco 2: Linx e ERP -->
+        <article class="box">
+          <h3>🏢 ERP & Consultoria Linx</h3>
+          <ul>
+            <li>Implantação e virada de sistemas</li>
+            <li>Configuração e parametrização fiscal</li>
+            <li>Treinamento completo de usuários</li>
+            <li>Suporte especializado e sustentação</li>
+            <li>Integração entre sistemas e APIs</li>
+          </ul>
+        </article>
+
+        <!-- Bloco 3: Redes e Infraestrutura -->
+        <article class="box">
+          <h3>🌐 Redes & Infraestrutura</h3>
+          <ul>
+            <li>Configuração de redes Wi-Fi e cabeadas</li>
+            <li>Compartilhamento seguro de arquivos e impressoras</li>
+            <li>Organização e cabeamento estruturado de TI</li>
+            <li>Diagnóstico preciso de problemas de rede</li>
+          </ul>
+        </article>
+
+        <!-- Bloco 4: Cloud & Workspace -->
+        <article class="box">
+          <h3>☁️ Cloud & Microsoft 365</h3>
+          <ul>
+            <li>Configuração do Microsoft 365 / Google Workspace</li>
+            <li>Migração profissional de e-mails corporativos</li>
+            <li>Estruturação de OneDrive e Google Drive</li>
+            <li>Compartilhamento seguro de arquivos em nuvem</li>
+          </ul>
+        </article>
+
+        <!-- Bloco 5: Segurança -->
+        <article class="box">
+          <h3>🔒 Segurança da Informação</h3>
+          <ul>
+            <li>Remoção de malwares e vírus</li>
+            <li>Proteção activa contra Ransomware</li>
+            <li>Instalação e gestão de antivírus corporativo</li>
+            <li>Rotinas de backup local e em nuvem automáticas</li>
+            <li>Definição de políticas de segurança interna</li>
+          </ul>
+        </article>
+
+        <!-- Bloco 6: Formatação -->
+        <article class="box">
+          <h3>💻 Formatação & Setup</h3>
+          <ul>
+            <li>Instalação e configuração do Windows 11</li>
+            <li>Instalação de drivers e softwares essenciais</li>
+            <li>Configuração de impressoras térmicas/fiscais</li>
+            <li>Backup preventivo e migração de dados segura</li>
+          </ul>
+        </article>
+
+        <!-- Bloco 7: Consultoria Estratégica -->
+        <article class="box">
+          <h3>📊 Consultoria & Ativos</h3>
+          <ul>
+            <li>Diagnóstico completo de infraestrutura</li>
+            <li>Inventário rigoroso de equipamentos</li>
+            <li>Gestão de ativos e documentação de ambientes</li>
+            <li>Planejamento tecnológico para redução de custos</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>✉ <a href="mailto:contato@inteligenciatech.com.br">contato@inteligenciatech.com.br</a></p>
+    <p>© 2026 InteligenciaTech • Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
